@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuCanvas : MonoBehaviour
 {
@@ -8,9 +10,12 @@ public class MainMenuCanvas : MonoBehaviour
     [SerializeField] private GameObject rivalStatsButton;
     [SerializeField] private GameObject arenaButton;
     [SerializeField] private GameObject tapirmonButton;
-    
+    [SerializeField] private GameObject confirmArena;
+
+   
     public void OnChangeMenu()
     {
+        Debug.Log("changeMenu");
         if (playerStatsMenu.activeSelf)
         {
             ClosePlayerStats();
@@ -22,22 +27,46 @@ public class MainMenuCanvas : MonoBehaviour
             OpenPlayerStats();
         }
     }
+
+    public void CloseMenu()
+    {
+        CloseRivalStats();
+        ClosePlayerStats();
+        CloseArena();
+    }
      
     private void OpenPlayerStats()
     {
         playerStatsMenu.SetActive(true);
     }
-    private void OpenRivalStats()
-    {
-        rivalStatsMenu.SetActive(true);
-    }
     private void ClosePlayerStats()
     {
         playerStatsMenu.SetActive(false);
     }
+    private void OpenRivalStats()
+    {
+        rivalStatsMenu.SetActive(true);
+    }
     private void CloseRivalStats()
     {
-        playerStatsMenu.SetActive(false);
+        rivalStatsMenu.SetActive(false);
+    }
+ 
+  
+
+    public void ArenaStart()
+    {
+        confirmArena.SetActive(true);
+    }
+
+    private void CloseArena()
+    {
+        confirmArena.SetActive(false);
+    }
+
+    public void StartCombat()
+    {
+        SceneManager.LoadScene("BattleScene");
     }
     
 }
