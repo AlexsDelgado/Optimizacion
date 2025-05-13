@@ -20,21 +20,21 @@ public class MainMenuCanvas : MonoBehaviour
         {
             ClosePlayerStats();
             OpenRivalStats();
+            CloseArena();
         }
         else
         {
             CloseRivalStats();
             OpenPlayerStats();
+            CloseArena();
         }
     }
-
     public void CloseMenu()
     {
         CloseRivalStats();
         ClosePlayerStats();
         CloseArena();
     }
-     
     private void OpenPlayerStats()
     {
         playerStatsMenu.SetActive(true);
@@ -51,22 +51,18 @@ public class MainMenuCanvas : MonoBehaviour
     {
         rivalStatsMenu.SetActive(false);
     }
- 
-  
-
-    public void ArenaStart()
+    public void OpenArenaMenu()
     {
         confirmArena.SetActive(true);
+        ClosePlayerStats();
+        CloseRivalStats();
     }
-
     private void CloseArena()
     {
         confirmArena.SetActive(false);
     }
-
     public void StartCombat()
     {
         SceneManager.LoadScene("BattleScene");
     }
-    
 }

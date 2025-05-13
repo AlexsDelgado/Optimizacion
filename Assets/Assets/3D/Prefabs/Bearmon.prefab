@@ -172,6 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331984100488117190}
   - component: {fileID: 221178560895163435}
+  - component: {fileID: 3547304635486866133}
   m_Layer: 0
   m_Name: Bearmon
   m_TagString: Player
@@ -188,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 1139588188102959484}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: -1}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -217,6 +218,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3547304635486866133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139588188102959484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae057f986938384ebdadbffb63ca802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Bearmon
+  AT: 10
+  DEF: 5
+  HP: 80
+  rewardEXP: 0
 --- !u!1 &1229783081931169850
 GameObject:
   m_ObjectHideFlags: 0
