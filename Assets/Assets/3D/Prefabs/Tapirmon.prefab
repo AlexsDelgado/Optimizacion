@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae057f986938384ebdadbffb63ca802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Tapirmon
+  DigimonName: Tapirmon
   AT: 5
   DEF: 5
   HP: 50

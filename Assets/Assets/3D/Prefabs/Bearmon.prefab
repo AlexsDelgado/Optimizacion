@@ -230,9 +230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae057f986938384ebdadbffb63ca802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Bearmon
+  DigimonName: Bearmon
   AT: 10
-  DEF: 5
+  DEF: 10
   HP: 80
   rewardEXP: 0
 --- !u!1 &1229783081931169850

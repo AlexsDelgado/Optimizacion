@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,13 @@ public class MainMenuCanvas : MonoBehaviour
     [SerializeField] private GameObject arenaButton;
     [SerializeField] private GameObject tapirmonButton;
     [SerializeField] private GameObject confirmArena;
+    [SerializeField] private GameObject Digimon0;
+    [SerializeField] private GameObject Digimon1;
+    [SerializeField] private GameObject Digimon0Selection;
+    [SerializeField] private GameObject Digimon1Selection;
+    [SerializeField] private TextMeshProUGUI RivalName;
+    
+    
 
    
     public void OnChangeMenu()
@@ -46,14 +54,24 @@ public class MainMenuCanvas : MonoBehaviour
     private void OpenRivalStats()
     {
         rivalStatsMenu.SetActive(true);
+        Digimon0.SetActive(true);
+        Digimon0Selection.SetActive(true);
+        Digimon1.SetActive(true);
+        Digimon1Selection.SetActive(true);
     }
     private void CloseRivalStats()
     {
         rivalStatsMenu.SetActive(false);
+        Digimon0.SetActive(false);
+        Digimon0Selection.SetActive(false);
+        
+        Digimon1.SetActive(false);
+        Digimon1Selection.SetActive(false);
     }
     public void OpenArenaMenu()
     {
         confirmArena.SetActive(true);
+        RivalName.text = GameManager.instance.actualRival.name;
         ClosePlayerStats();
         CloseRivalStats();
     }
@@ -65,4 +83,5 @@ public class MainMenuCanvas : MonoBehaviour
     {
         SceneManager.LoadScene("BattleScene");
     }
+    
 }

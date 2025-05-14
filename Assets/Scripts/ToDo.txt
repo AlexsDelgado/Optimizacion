@@ -3,5 +3,10 @@ to do:
 -posicionar correctamente los bichos (-2 0 1.5) -> HECHO
 -Spawn de combate con diff prefab -> HECHO
 -Menu elección combate -> HECHO
--Iniciar datos combate
+-Iniciar datos combate -> HECHO
+-Recibir y realizar daño ->
+-Animaciones ->
+-UI menu con stats ->
+-Sistema de progresion ->
+-nuevos enemigos ->
 

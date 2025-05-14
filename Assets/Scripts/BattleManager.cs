@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour, IUpdate
 {
@@ -15,7 +18,8 @@ public class BattleManager : MonoBehaviour, IUpdate
     [SerializeField] private Transform playerPos;
     [SerializeField] private Transform rivalPos;
     [SerializeField] private Transform AttackPos;
-    
+    [SerializeField] private BattleCanvas UI;
+    private bool action =true;
     
     
     
@@ -28,48 +32,63 @@ public class BattleManager : MonoBehaviour, IUpdate
         else
         {
             actualTurnTime= 0;
+            //check si se encuentra el turno del player
             if (playerTurn)
             {
                 playerTurn = false;
+                RivalTurn();
+                Debug.Log("rival action");
             }
             else
             {
                 playerTurn = true;
+                action = true;
             }
-
             turnCount++;
             Debug.Log("Turn "+ turnCount +" ended -> player can move: \n" + playerTurn );
         }
     }
+
+
     void Awake()
     {
         CustomUpdateManager.Instance.AddToList(this);
         //Debug.Log("Battle Manager AWKAE");
         turnCount = 0;
-        startCombat();
+        StartCombat();
     }
 
-    public void startCombat()
+    public void StartCombat()
     {
-        //gamemanager.instance.player
-        //gamemanager.instance.rival
         playerGO= Instantiate(GameManager.instance.player, playerPos);
         rivalGO=Instantiate(GameManager.instance.actualRival, rivalPos);
-        
-       
-        
         playerGO.transform.position = playerPos.position;
-        
-        //rivalGO.transform.position = rivalPos.position;
+        rivalGO.transform.position = rivalPos.position;
         rival = rivalGO.GetComponent<Digimon>();
         player = playerGO.GetComponent<Digimon>();
+        SetupCanvas();
+        player.StartGameObject();
+        rival.StartGameObject();
+        
     }
-
+    
+    public void SetupCanvas()
+    {
+        UI.SetupCanvas(rival.DigimonName,player.DigimonName);
+        UI.UpdateHP_Player(player.HP);
+        UI.UpdateHP_Rival(rival.HP);
+    }
     public void Attack()
     {
-        if (playerTurn)
+        if (playerTurn&&action)
         {
-            playerGO.GetComponent<Animator>().Play("attack1");
+            player.Action();
+            action = false;
+            DoDamage();
+            rival.Damage();
+            UI.UpdateHP_Rival(rival.HP);
+            UI.SetLogs(player.DigimonName+" attack and deals " + player.AT + " damage.");
+            
         }
         else
         {
@@ -80,12 +99,74 @@ public class BattleManager : MonoBehaviour, IUpdate
     {
         if (playerTurn)
         {
-            playerGO.GetComponent<Animator>().Play("attack2");
+            playerGO.GetComponent<Animator>().Play("Skill");
         }
         else
         {
             Debug.Log("Player cannot move");
         }
     }
-    
+
+    public void Heal()
+    {
+        if (playerTurn)
+        {
+            player.HP += player.DEF;
+            UI.UpdateHP_Player(player.HP);
+            UI.SetLogs(player.DigimonName+" heals " + rival.DEF + " HP.");
+            action = false;
+
+        }
+        else
+        {
+            Debug.Log("Player cannot move");
+        }
+    }
+    public void RivalTurn()
+    {
+        rival.Action();
+        GetDamage();
+        player.Damage();
+        Debug.Log("rival turn ");
+        UI.SetLogs(rival.DigimonName+" attack and deals " + rival.AT + " damage.");
+        UI.UpdateHP_Player(player.HP);
+
+    }
+
+    public void DoDamage()
+    {
+        rival.HP = rival.HP - player.AT;
+        if (rival.HP <= 0)
+        {
+            EndCombat(true);
+        }
+    }
+
+    public void GetDamage()
+    {
+        player.HP = player.HP - rival.AT;
+        if (player.HP <= 0)
+        {
+            EndCombat(false);
+        }
+    }
+
+    public void EndCombat(bool win)
+    {
+        if (win)
+        {
+            GameManager.instance.EXP += rival.rewardEXP;
+            player.Win();
+            rival.Lose();
+            UI.EndCombat(win);
+        }
+        else
+        {
+            player.Lose();
+            rival.Win();
+            UI.EndCombat(win);
+        }
+        CustomUpdateManager.Instance.RemoveFromUpdateList(this);
+        //GameManager.instance.returnMainIsland();
+    }
 }
