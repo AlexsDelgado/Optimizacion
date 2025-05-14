@@ -37,7 +37,7 @@ public class BattleManager : MonoBehaviour, IUpdate
             {
                 playerTurn = false;
                 RivalTurn();
-                Debug.Log("rival action");
+                
             }
             else
             {
@@ -45,7 +45,7 @@ public class BattleManager : MonoBehaviour, IUpdate
                 action = true;
             }
             turnCount++;
-            Debug.Log("Turn "+ turnCount +" ended -> player can move: \n" + playerTurn );
+            
         }
     }
 
@@ -53,7 +53,7 @@ public class BattleManager : MonoBehaviour, IUpdate
     void Awake()
     {
         CustomUpdateManager.Instance.AddToList(this);
-        //Debug.Log("Battle Manager AWKAE");
+        
         turnCount = 0;
         StartCombat();
     }
@@ -90,10 +90,7 @@ public class BattleManager : MonoBehaviour, IUpdate
             UI.SetLogs(player.DigimonName+" attack and deals " + player.AT + " damage.");
             
         }
-        else
-        {
-            Debug.Log("Player cannot move");
-        }
+    
     }
     public void Skill()
     {
@@ -101,10 +98,7 @@ public class BattleManager : MonoBehaviour, IUpdate
         {
             playerGO.GetComponent<Animator>().Play("Skill");
         }
-        else
-        {
-            Debug.Log("Player cannot move");
-        }
+    
     }
 
     public void Heal()
@@ -117,17 +111,13 @@ public class BattleManager : MonoBehaviour, IUpdate
             action = false;
 
         }
-        else
-        {
-            Debug.Log("Player cannot move");
-        }
+  
     }
     public void RivalTurn()
     {
         rival.Action();
         GetDamage();
         player.Damage();
-        Debug.Log("rival turn ");
         UI.SetLogs(rival.DigimonName+" attack and deals " + rival.AT + " damage.");
         UI.UpdateHP_Player(player.HP);
 

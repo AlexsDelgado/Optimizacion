@@ -41,10 +41,6 @@ public class GameManager : MonoBehaviour
             newGame = false;
                
         }
-        else
-        {
-            Debug.Log("etnro else");
-        }
     }
     public void returnMainIsland()
     {
@@ -66,11 +62,6 @@ public class GameManager : MonoBehaviour
             playerStats.DEF += playerStats.DEF;
             playerStats.HP += playerStats.HP/2;
             costLevelUp= costLevelUp*2;
-            Debug.Log("Update level up");
-        }
-        else
-        {
-            Debug.Log("Not Enough EXP");
         }
     }
 }

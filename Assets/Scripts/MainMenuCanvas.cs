@@ -23,7 +23,6 @@ public class MainMenuCanvas : MonoBehaviour
    
     public void OnChangeMenu()
     {
-        Debug.Log("changeMenu");
         if (playerStatsMenu.activeSelf)
         {
             ClosePlayerStats();

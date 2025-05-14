@@ -32,7 +32,6 @@ public class Digimon : MonoBehaviour
         AT = 10;
         DEF = 10;
         HP = 80;
-        Debug.Log("Reset Stats Digimon");
     }
 
     public void Win()
