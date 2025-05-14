@@ -4,9 +4,8 @@ to do:
 -Spawn de combate con diff prefab -> HECHO
 -Menu elección combate -> HECHO
 -Iniciar datos combate -> HECHO
--Recibir y realizar daño ->
--Animaciones ->
--UI menu con stats ->
--Sistema de progresion ->
--nuevos enemigos ->
+-Recibir y realizar daño -> HECHO
+-UI menu con stats -> HECHO
+-Sistema de progresion -> HECHO
+-nuevos enemigos -> TO DO
 

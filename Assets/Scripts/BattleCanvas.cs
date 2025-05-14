@@ -52,4 +52,6 @@ public class BattleCanvas : MonoBehaviour
     {
         GameManager.instance.returnMainIsland();
     }
+
+
 }

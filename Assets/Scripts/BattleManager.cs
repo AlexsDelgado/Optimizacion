@@ -113,7 +113,7 @@ public class BattleManager : MonoBehaviour, IUpdate
         {
             player.HP += player.DEF;
             UI.UpdateHP_Player(player.HP);
-            UI.SetLogs(player.DigimonName+" heals " + rival.DEF + " HP.");
+            UI.SetLogs(player.DigimonName+" heals " + player.DEF + " HP.");
             action = false;
 
         }

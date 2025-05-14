@@ -83,5 +83,10 @@ public class MainMenuCanvas : MonoBehaviour
     {
         SceneManager.LoadScene("BattleScene");
     }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     
 }
