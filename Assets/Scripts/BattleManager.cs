@@ -49,11 +49,20 @@ public class BattleManager : MonoBehaviour, IUpdate
         }
     }
 
-
-    void Awake()
+    public void StartUpdate()
     {
         CustomUpdateManager.Instance.AddToList(this);
+    }
+
+    public void StopUpdate()
+    {
+        CustomUpdateManager.Instance.RemoveFromUpdateList(this);
+    }
+    
+    void Awake()
+    {
         
+        StartUpdate();
         turnCount = 0;
         StartCombat();
     }

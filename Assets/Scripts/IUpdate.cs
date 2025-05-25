@@ -2,13 +2,7 @@ public interface IUpdate
 {
     void CustomUpdate();
 
-    void StartUpdate()
-    {
-        CustomUpdateManager.Instance.AddToList(this);
-    }
+    public void StartUpdate();
 
-    void StopUpdate()
-    {
-        CustomUpdateManager.Instance.RemoveFromUpdateList(this);
-    }
+    public void StopUpdate();
 }
