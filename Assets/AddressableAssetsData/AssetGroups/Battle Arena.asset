@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Battle Arena
+  m_EditorClassIdentifier: 
+  m_GroupName: Battle Arena
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0c26c11f0548b34448289e706275148c
+  m_SerializeEntries:
+  - m_GUID: a87dae0d8453ccd4d879faf76478d584
+    m_Address: Assets/Assets/3D/Backgrounds/Colosseum/Battle_stadium.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d9d4012b77319d42b841d191236509a
+    m_Address: Assets/Assets/3D/Backgrounds/Colosseum/skybox edit.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72ccee7167dfad84095cb947c4b16ca2
+    m_Address: Assets/Assets/3D/Backgrounds/Colosseum/Battle_stadium_sphere.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44fb53cc95bc82641b2c0d2f7fb80644
+    m_Address: Assets/Assets/3D/Backgrounds/Colosseum/untitled.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fddca822261d394aacf784e5eb7c707
+    m_Address: Assets/Assets/3D/Prefabs/Background Coliseo.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec11f54dd3008174a8d52e4e600d1483
+    m_Address: Assets/Assets/3D/Prefabs/ff background.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f92eb9dee6b0ae343988b630b4e9f7f5
+    m_Address: Assets/Assets/3D/Props/Capsule Machine/Capsule.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd4b488c2365ceb40b02083980ec618a
+    m_Address: Assets/Assets/3D/Props/Incubator/Incubator.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1ac99c9674ab774da4e9063001293dd
+    m_Address: Assets/Assets/3D/Prefabs/Public LOD.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 348f25ac27983794a8a9feae5ebd6dc3
+    m_Address: Assets/Assets/3D/Characters/TK/TK.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f88c6a782791f164ba7550e720009d0e
+    m_Address: Assets/Assets/3D/Characters/Takuto/Takuto/z004 with animations.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ac499f1e728cd14abdadb6704257aa3
+    m_Address: Assets/Assets/3D/Characters/Rina Shinomiya/z001 with animations.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 989722361ca2b18449020fa2fb4954c8
+    m_Address: Assets/Assets/3D/Characters/Matt/Matt.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 426f40bd28ce9a948a711c9c830a3432
+    m_Address: Assets/Assets/3D/Characters/Masaru/Masaru_Costume01.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e440fb2aafa34f04ea2c8e5e97389cc4
+    m_Address: Assets/Assets/3D/Characters/Mameo/z008 with animations.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59a153e7afe474d4786e7959ac87137e
+    m_Address: Assets/Assets/3D/Characters/Kaiser/DigimonKaiser.obj
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a677f6a389b58cc4bbd4fb7d9ee06df0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8dba1e5d832e4bb40bd09e492ceebec6, type: 2}
+    - {fileID: 11400000, guid: 857d1e127f5dd284fba5c54f03a31060, type: 2}

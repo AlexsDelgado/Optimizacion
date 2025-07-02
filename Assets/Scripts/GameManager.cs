@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             actualRival = rival[0];
             player.GetComponent<Digimon>().ResetStats();
             newGame = false;
+            
                
         }
     }

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Digimons
+  m_EditorClassIdentifier: 
+  m_GroupName: Digimons
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 40961b92bd7e6644a9e3ee4f2a1effeb
+  m_SerializeEntries:
+  - m_GUID: 36477fec950341f469aca22feb9014e9
+    m_Address: Assets/Assets/3D/Prefabs/Grizzmon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11b76c4af9b612d47bfa99513801c168
+    m_Address: Assets/Assets/3D/Prefabs/Tapirmon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6777660da182bc746bbd8d90c06e2a2d
+    m_Address: Assets/Assets/3D/Prefabs/Bearmon.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a677f6a389b58cc4bbd4fb7d9ee06df0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3d4840561a3980045952899903eafc0d, type: 2}
+    - {fileID: 11400000, guid: c35c6e8116f622d4093c248905022f1b, type: 2}

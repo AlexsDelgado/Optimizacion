@@ -2,22 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleCanvas : MonoBehaviour
 {
     public GameObject WinScreen;
     public GameObject DefeatScreen;
-    public GameObject Buttons;
+    public Button atk;
+    public Button heal;
+    
     public TextMeshProUGUI rivalName;
     public TextMeshProUGUI rivalHP;
     public TextMeshProUGUI playerName;
     public TextMeshProUGUI playerHP;
     public TextMeshProUGUI COMBAT_LOG;
+
+    public CanvasGroup buttons;
+    public CanvasGroup battleInfo;
+    public CanvasGroup endBattle;
+
+    [SerializeField] private BattleManager _battleManager; 
+    
     
     
     public void EndCombat(bool win)
     {
-        Buttons.SetActive(false);
+        buttons.alpha = 0;
+        buttons.interactable = false;
+        battleInfo.alpha = 0;
+        battleInfo.interactable=false;
+        
+        endBattle.alpha = 1;
+        endBattle.interactable = true;
+        //Buttons.SetActive(false);
         if (win)
         {
             WinScreen.SetActive(true);
@@ -32,6 +49,9 @@ public class BattleCanvas : MonoBehaviour
     {
         rivalName.text = rival;
         playerName.text = player;
+        atk.onClick.AddListener(_battleManager.Attack);
+        heal.onClick.AddListener(_battleManager.Heal);
+
     }
     public void UpdateHP_Player(int newHP)
     {
