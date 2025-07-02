@@ -4224,19 +4224,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749189877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1255440932}
-        m_TargetAssemblyTypeName: MainMenuCanvas, Assembly-CSharp
-        m_MethodName: StartCombat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &749189877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,6 +5026,7 @@ MonoBehaviour:
   gold: 0
   costLevelUp: 5
   newGame: 1
+  loadingScreen: {fileID: 0}
 --- !u!4 &853559139
 Transform:
   m_ObjectHideFlags: 0
@@ -8214,6 +8203,7 @@ MonoBehaviour:
   closeRival: {fileID: 428721779}
   closeDigimon: {fileID: 514946652}
   closeArena: {fileID: 879240682}
+  confirmArenaButton: {fileID: 749189876}
   Digimon0: {fileID: 813812120}
   Digimon1: {fileID: 1185702755}
   Digimon0Selection: {fileID: 1169073944}

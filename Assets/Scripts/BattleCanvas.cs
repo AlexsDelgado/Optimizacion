@@ -70,7 +70,8 @@ public class BattleCanvas : MonoBehaviour
 
     public void Continue()
     {
-        GameManager.instance.returnMainIsland();
+        //GameManager.instance.returnMainIsland();
+        GameManager.instance.LoadSceneMainMenu();
     }
 
 

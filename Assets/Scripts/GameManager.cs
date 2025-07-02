@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int costLevelUp = 5;
     private int costUnlockCombat;
     public bool newGame = true;
+    public GameObject loadingScreen;
 
     private void Awake()
     {
@@ -65,4 +66,32 @@ public class GameManager : MonoBehaviour
             costLevelUp= costLevelUp*2;
         }
     }
+
+    public void LoadSceneCombat()
+    {
+        SceneManager.LoadScene("LoadScreen");
+        StartCoroutine(LoadSceneAsyc("battleScene"));
+    }
+    public void LoadSceneMainMenu()
+    {
+        SceneManager.LoadScene("LoadScreen");
+        StartCoroutine(LoadSceneAsyc("mainScene"));
+    }
+
+    IEnumerator LoadSceneAsyc(string sceneName)
+    {
+        //AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        //loadingScreen.SetActive(true);
+        // while (!operation.isDone)
+        // {
+        //     //cara el juego
+        //     yield return null;
+        // }
+        yield return new WaitForSeconds(2f);
+        //AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
+
+    }
+    
+    
 }

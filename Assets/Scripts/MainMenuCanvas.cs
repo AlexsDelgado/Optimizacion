@@ -19,6 +19,7 @@ public class MainMenuCanvas : MonoBehaviour
     [SerializeField] private Button closeRival;
     [SerializeField] private Button closeDigimon;
     [SerializeField] private Button closeArena;
+    [SerializeField] private Button confirmArenaButton;
     
     
     
@@ -47,6 +48,8 @@ public class MainMenuCanvas : MonoBehaviour
         closeRival.onClick.AddListener(CloseRivalStats);
         
         backMainMenuButton.onClick.AddListener(ReturnMenu);
+
+        confirmArenaButton.onClick.AddListener(StartCombat);
         
         startGame();
     }
@@ -148,7 +151,8 @@ public class MainMenuCanvas : MonoBehaviour
     }
     public void StartCombat()
     {
-        SceneManager.LoadScene("BattleScene");
+        GameManager.instance.LoadSceneCombat();
+        
     }
 
     public void ReturnMenu()
